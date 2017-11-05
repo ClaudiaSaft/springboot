@@ -1,21 +1,27 @@
-package br.com.matera.springboot;
+package br.com.matera.springboot.rest;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.matera.springboot.Client.GenderEnum;
+import br.com.matera.springboot.entity.Client;
+import br.com.matera.springboot.entity.Client.GenderEnum;
+import br.com.matera.springboot.repository.ClientRepository;
 
 @RestController
 public class ClientRest {
 
-	private static List<Client> clients;
+	@Autowired
+	private ClientRepository clientRepository;
 	
-	static{
+	private List<Client> clients;
+	
+	{
 		clients = new ArrayList<>();
 		clients.add(new Client(1L, "MARIA DA SILVA", 27, GenderEnum.FEMININO));
 		clients.add(new Client(2L, "JOÃO DA SILVA SOUZA", 50, GenderEnum.MASCULINO));
@@ -25,7 +31,7 @@ public class ClientRest {
 	
 	@RequestMapping("/client")
 	public List<Client> getClient() {
-		return clients;
+		return (List<Client>) clientRepository.findAll();
 	}
 	
 	@RequestMapping("/client/{id}")

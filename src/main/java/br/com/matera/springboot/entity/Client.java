@@ -1,10 +1,29 @@
-package br.com.matera.springboot;
+package br.com.matera.springboot.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Client {
 
+	@Id
+	@Column(name="ID")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	
+	@Column(name="NAME")
 	private String name;
+	
+	@Column(name="AGE")
 	private Integer age;
+	
+	@Column(name="GENDER")
+	@Enumerated(EnumType.STRING)
 	private GenderEnum gender;
 
 	public Client(Long id, String name, Integer age, GenderEnum gender) {
