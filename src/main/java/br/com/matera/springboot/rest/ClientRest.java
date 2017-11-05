@@ -25,7 +25,6 @@ public class ClientRest {
 	
 	@RequestMapping(name="/client", method=RequestMethod.POST)
 	public Long newClient(@RequestBody Client client) {
-		System.out.println(client);
 		Client newClient = clientRepository.save(client);
 		return newClient.getId();
 	}
