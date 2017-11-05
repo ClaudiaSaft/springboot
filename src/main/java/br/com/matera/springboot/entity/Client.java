@@ -7,8 +7,10 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="CLIENT")
 public class Client {
 
 	@Id
@@ -86,6 +88,10 @@ public class Client {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+	@Override
+	public String toString() {
+		return "Client [id=" + id + ", name=" + name + ", age=" + age + ", gender=" + gender + "]";
 	}
 	
 }
