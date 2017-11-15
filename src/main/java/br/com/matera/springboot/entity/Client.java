@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 @Table(name="CLIENT")
 public class Client {
@@ -19,6 +22,8 @@ public class Client {
 	private Long id;
 	
 	@Column(name="NAME")
+	@NotEmpty(message="Campo nome é obrigatório")
+	@Length(min=3, message="O campo nome deve ter mais do que 3 caracteres")
 	private String name;
 	
 	@Column(name="AGE")
