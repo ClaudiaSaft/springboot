@@ -1,0 +1,7 @@
+Projeto para estudo de Spring e Spring boot.
+
+Como rodar Spring boot:
+
+- mvn clean install
+- Acessar a pasta \springboot\target do projeto
+- java -jar springboot-0.0.1-SNAPSHOT.jar
