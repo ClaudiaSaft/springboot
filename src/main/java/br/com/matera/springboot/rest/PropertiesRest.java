@@ -10,9 +10,16 @@ public class PropertiesRest {
 
 	@Value("${paginacao.qtd_por_pagina}")
 	private Integer qtdPorPagina;
+	@Value("${user.logged}")
+	private String userLogged;
 	
 	@RequestMapping(value="/page/count", method=RequestMethod.GET)
 	public Integer getCountPages() {
 		return qtdPorPagina;
+	}
+	
+	@RequestMapping(value="/userLogged", method=RequestMethod.GET)
+	public String userLogger() {
+		return userLogged;
 	}
 }
