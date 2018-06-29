@@ -1,4 +1,4 @@
-package br.com.matera.springboot;
+package br.com.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

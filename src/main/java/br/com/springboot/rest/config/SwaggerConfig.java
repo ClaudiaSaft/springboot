@@ -1,4 +1,4 @@
-package br.com.matera.springboot.rest.config;
+package br.com.springboot.rest.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SwaggerConfig {
 						.groupName("public-api")
 						.apiInfo(apiInfo())
 						.select()
-						.apis(RequestHandlerSelectors.basePackage("br.com.matera.springboot"))
+						.apis(RequestHandlerSelectors.basePackage("br.com.springboot"))
 						.paths(PathSelectors.any())
 						.build();
 	}

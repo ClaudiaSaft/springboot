@@ -1,4 +1,4 @@
-package br.com.matera.springboot.entity;
+package br.com.springboot.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +11,8 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import br.com.springboot.entity.enumeration.GenderEnum;
 
 @Entity
 @Table(name="CLIENT")
@@ -65,10 +67,6 @@ public class Client {
 	}
 	public void setGender(GenderEnum gender) {
 		this.gender = gender;
-	}
-
-	public enum GenderEnum{
-		FEMININO, MASCULINO;
 	}
 
 	@Override

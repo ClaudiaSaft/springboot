@@ -1,8 +1,8 @@
-package br.com.matera.springboot.repository;
+package br.com.springboot.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import br.com.matera.springboot.entity.Client;
+import br.com.springboot.entity.Client;
 
 public interface ClientRepository extends CrudRepository<Client, Long> {
 

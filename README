@@ -1,7 +1,19 @@
 Projeto para estudo de Spring e Spring boot.
 
-Como rodar Spring boot:
+Como rodar Spring boot na mão:
 
+- Acessar a pasta raiz do projeto \springboot
 - mvn clean install
-- Acessar a pasta \springboot\target do projeto
-- java -jar springboot-0.0.1-SNAPSHOT.jar
+- Acessar a pasta \springboot\target
+- java -jar springboot-1.0.0-SNAPSHOT.jar
+
+Ou instalar o plugin Boot Dashboard do eclipse:
+
+-Spring IDE Boot Microservices Dash
+-Spring IDE Boot Support
+
+No Eclipse:
+
+Window > Show view > Other > Boot Dashboard
+
+
