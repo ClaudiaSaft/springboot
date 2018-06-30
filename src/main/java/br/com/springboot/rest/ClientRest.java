@@ -29,7 +29,7 @@ public class ClientRest {
 		return ResponseEntity.ok().body(clients);
 	}
 	
-	@RequestMapping(value="/", method=RequestMethod.POST, produces="application/json")
+	@RequestMapping(value="/", method=RequestMethod.POST)
 	public ResponseEntity<Long> saveClient(@Valid @RequestBody ClientData client) {
 		Long newClientId = clientService.save(client);
 		return ResponseEntity.ok().body(newClientId);

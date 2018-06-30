@@ -42,6 +42,9 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	private ClientData parseClientToClientData(Client client) {
+		if(client == null){
+			return new ClientData();
+		}
 		return new ClientData(client.getId(), client.getName(), client.getAge(), client.getGender());
 	}
 

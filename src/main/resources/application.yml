@@ -29,7 +29,6 @@ spring:
       log-validation-errors: true
 
 --- 
-
 spring:
   profiles: dev
   jpa:

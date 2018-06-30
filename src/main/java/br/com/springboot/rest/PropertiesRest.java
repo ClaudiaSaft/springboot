@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PropertiesRest {
 
-	@Value("${paginacao.page_count}")
-	private Integer pageCount;
-	@Value("${user.logged}")
-	private String userLogged;
-	
-	@RequestMapping(value="/page/count", method=RequestMethod.GET)
-	public Integer getPageCount() {
-		return pageCount;
-	}
-	
-	@RequestMapping(value="/userLogged", method=RequestMethod.GET)
-	public String getUserLogger() {
-		return userLogged;
-	}
+//	@Value("${paginacao.page_count}")
+//	private Integer pageCount;
+//	@Value("${user.logged}")
+//	private String userLogged;
+//	
+//	@RequestMapping(value="/page/count", method=RequestMethod.GET)
+//	public Integer getPageCount() {
+//		return pageCount;
+//	}
+//	
+//	@RequestMapping(value="/userLogged", method=RequestMethod.GET)
+//	public String getUserLogger() {
+//		return userLogged;
+//	}
 }

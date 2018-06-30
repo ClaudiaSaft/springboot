@@ -1,0 +1,11 @@
+spring:
+  profiles: integrationtest
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: org.hsqldb.jdbcDriver
+    url: jdbc:hsqldb:mem:paging
+    username: sa
+    password: 
